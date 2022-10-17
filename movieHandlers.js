@@ -1,5 +1,7 @@
 const database = require("./database");
 
+
+
 const getMovies = (req, res) => {
   database
     .query("select * from movies")
@@ -32,6 +34,7 @@ const getMovieById = (req, res) => {
 
 const postMovie = (req, res) => {
   const { title, director, year, color, duration } = req.body;
+
 
   database
     .query(
